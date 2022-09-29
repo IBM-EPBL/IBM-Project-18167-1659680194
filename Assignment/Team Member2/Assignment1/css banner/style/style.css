@@ -1,0 +1,66 @@
+.p-div {
+    width: 100%;
+    height: 400px;
+    background-color: rgb(3, 183, 255);
+}
+
+.p-img {
+    position: absolute;
+    width: 270px;
+    height: 250px;
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 10%;
+}
+
+.profile-pic {
+    width: 260px;
+    height: 240px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.username {
+    color: white;
+    margin-top: 4%;
+}
+
+.bio {
+    font-size: 15px;
+    color: white;
+}
+
+.download-cv {
+    border-radius: 100px;
+    height: 40px;
+    width: 150px;
+    border-style: none;
+}
+
+.hire-me {
+    width: 120px;
+    border-radius: 100px;
+    height: 40px;
+    background-color: lightgreen;
+    border-style: none;
+}
+
+.barout {
+    width: 70%;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+.Lbar {
+    margin-left: 7%;
+    margin-bottom: 20px;
+}
+
+.barin {
+    height: 100%;
+}
+
+.Rbar {
+    margin-bottom: 20px;
+}
