@@ -1,0 +1,40 @@
+{% extends "home.html" %}
+
+  {% block navbar %}
+
+          <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="{{ url_for('signin') }}">Signin</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('signup')}}">Signup</a>
+                </li>
+              </ul>
+
+                  {% endblock %}
+
+{% block content %}<br><br>
+<center>
+
+    <div class="container text-center">
+        <div class="row">
+          <div class="col"><br><br><br><br><br><br><br><br>
+            <h1 style="font-family: Cooper Black;color:white; vertical-align: middle; text-align: justify; font-size:80px;"> FLASK APPLICATION</h1>
+
+          </div>
+            <div class="col">
+         <div class="card" STYLE="MARGIN:20PX;">
+  <img src="static/images/login.png" class="card-img-top" alt="addstudent" style="width:250px;">
+
+  <div class="card-body">
+    <h5 class="card-title">ACCESS APPLICATION</h5>
+    <p class="card-text">Click the below botton to login to flask application.</p>
+    <a href="/signin" class="btn btn-primary">SIGN IN</a>
+  </div>
+</div>
+        </div>
+        </div></div>
+
+</center>
+{% endblock %}
