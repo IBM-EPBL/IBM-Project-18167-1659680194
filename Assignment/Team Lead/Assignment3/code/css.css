@@ -1,0 +1,25 @@
+body{
+
+background-image:linear-gradient(to right ,black,blue,black);
+
+}
+
+img{
+
+    border-radius: 30px;
+    padding: 20px;
+    width: 230px;
+
+}
+
+h1{
+
+    font-family:'Times New Roman', Times, serif;
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+    max-width: fit-content;
+    border-radius: 10px;
+    margin-top: 40px;
+    
+}
