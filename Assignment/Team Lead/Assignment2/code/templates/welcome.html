@@ -1,0 +1,53 @@
+{% extends "home.html" %}
+
+ {% block navbar %}
+
+
+    <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('new_student')}}">Add student</a>
+                </li>
+
+<li class="nav-item">
+                  <a class="nav-link" href="{{url_for('list')}}">List student</a>
+                </li>
+
+<li class="nav-item">
+                  <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+                </li>
+
+
+
+
+ {% endblock %}
+
+{% block content %}<br><br><br>
+
+<div class="row">
+  <div class="col">
+
+<div class="card" style="margin-left:20px;">
+  <img src="static/images/add.webp" class="card-img-top" alt="addstudent" style="width:200px;">
+
+  <div class="card-body">
+    <h5 class="card-title">ADD STUDENTS</h5>
+    <p class="card-text">Click the below botton to add the students in flask application </p>
+    <a href="/addstudent" class="btn btn-primary">Add students</a>
+  </div>
+</div>
+  </div>
+    <div class="col">
+
+<div class="card" style="margin-right:20px;">
+  <img src="static/images/list.jpg" class="card-img-top" alt="liststudent" style="width:200px;">
+
+  <div class="card-body">
+    <h5 class="card-title">LIST OF STUDENTS</h5>
+    <p class="card-text">Click the below link to show all students in the list.</p>
+    <a href="/list" class="btn btn-primary">List students</a>
+  </div>
+</div>
+  </div>
+
+
+
+{% endblock %}

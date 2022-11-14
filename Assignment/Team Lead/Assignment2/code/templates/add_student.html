@@ -1,0 +1,69 @@
+{% extends "home.html" %}
+
+ {% block navbar %}
+
+
+    <li class="nav-item">
+                  <a class="nav-link disabled" href="{{url_for('new_student')}}">Add student</a>
+                </li>
+
+<li class="nav-item">
+                  <a class="nav-link" href="{{url_for('list')}}">List student</a>
+                </li>
+
+<li class="nav-item">
+                  <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+                </li>
+
+
+
+
+ {% endblock %}
+{% block content %}
+
+<hr>
+<center>
+
+<form action = "{{ url_for('addrec') }}" method = "POST">
+
+     <div style="  background-image: linear-gradient(to bottom right, white,white,white ,blue,black); width:fit-content; padding:30px; border-radius:50px; margin:50px;">
+    <h3 style="background-image: linear-gradient(to right,#00b9fb,black); border-radius:50px; padding:10px; color:white;">Donor Information</h3>
+
+        <table  cellpadding="10"  >
+    <tr >
+        <td>
+        <h5 style="background-image: linear-gradient(to right,#00b9fb,black);color:white; padding:10px; border-radius:50px;">Name</h5></td>
+        <td> <input type = "text" name="name" ><br></td>
+    </tr>
+    
+  <tr>
+        <td>
+        <h5 style="background-image: linear-gradient(to right,#00b9fb,black);color:white; padding:10px; border-radius:50px;">Address</h5></td>
+        <td> <input type = "text" name="address" ><br></td>
+    </tr>
+
+      <tr>
+        <td>
+        <h5 style="background-image: linear-gradient(to right,#00b9fb,black);color:white; padding:10px; border-radius:50px;">City</h5></td>
+        <td> <input type = "text" name="city" ><br></td>
+    </tr>
+
+      <tr>
+        <td>
+        <h5 style="background-image: linear-gradient(to right,#00b9fb,black);color:white; padding:10px; border-radius:50px;">Pincode</h5></td>
+        <td> <input type = "text" name="pin" ><br></td>
+    </tr><br>
+
+                  <tr>
+        <td>
+        <h5 style="background-image: linear-gradient(to right,#00b9fb,black);color:white; padding:10px; border-radius:50px;">Mobile No</h5></td>
+        <td> <input type = "text" name="mobile" ><br></td>
+    </tr><br>
+
+ </table><br>
+    <button  class="btn btn-primary" type = "submit" value="submit" STYLE="font-family:times new roman;">ADD DETAILS </button>
+
+      </div>
+     </form>
+    </center>
+{% endblock %}
