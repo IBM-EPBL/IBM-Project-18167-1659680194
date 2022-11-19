@@ -1,0 +1,44 @@
+{% extends "donordashboard.html" %}
+
+{% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                {{msg}}{{msg2}}{{msg4}} </h6>
+                {% endblock %}
+
+
+ {% endblock %}
+{% block requestlist %}
+<BR>
+    <img src="https://plasmasonation.s3.jp-tok.cloud-object-storage.appdomain.cloud/feedback.png" width="500px;">
+{% endblock %}
+{% block verify %}
+<form action="/verify" method="post" >
+
+<div class="p-3 border bg-primary">
+    <div class="card">
+<div class="card-body">
+<h5 class="card-title" style="background-color:blue; color:aliceblue;border-radius :10px; padding:10px;">{{msg4}}</h5><br>
+
+<table >
+    <tr >
+<input type="text" name="username" placeholder="username"> </tr><br>
+<tr>
+    <input type="text" name="documenttype" placeholder="Aadhar/Voter Id"> </tr><br>
+</tr>
+<tr>
+
+  <input type="number" name="documentnumber" placeholder="Document Number"> 
+  </tr></table><br>
+
+  <button type="submit" class="btn btn-primary" value="submit">SUBMIT</button>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "receiverdashboard.html" %}
+
+
+{% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                {{msg}}{{msg2}}{{msg4}} </h6>
+                {% endblock %}
+
+
+ {% endblock %}
+{% block donorlist %}
+<BR>
+    <img src="https://plasmasonation.s3.jp-tok.cloud-object-storage.appdomain.cloud/feedback.png" width="500px;">
+{% endblock %}
+{% block feedback %}
+<form action="feeding" method="post" >
+
+<div class="p-3 border bg-primary">
+    <div class="card">
+<div class="card-body">
+<h5 class="card-title" style="background-color:blue; color:aliceblue;border-radius :10px; padding:10px;">{{msg4}}</h5><br>
+
+
+
+
+<select class="form-select"  aria-label="size 3 select example" aria-placeholder="Select User" name="feedtouser">
+    
+
+  <option selected >Admin</option>
+  {% for row in students %}
+    <option  >{{row["USERNAME"]}}</option>
+    {% endfor %}
+  </select><br>
+
+  <textarea name="feedback" placeholder="Type your feedback here">feedback </textarea>
+
+  <button type="submit" class="btn btn-primary" value="submit">SUBMIT</button>
+</form>
+
+
+{% endblock %}

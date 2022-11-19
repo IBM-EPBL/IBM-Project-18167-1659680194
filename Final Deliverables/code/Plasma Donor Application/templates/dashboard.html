@@ -1,0 +1,51 @@
+{% extends "home.html" %}
+
+ {% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                WELCOME
+
+                {{msg}} </h6>
+                {% endblock %}
+
+
+ {% endblock %}
+
+{% block content %}
+
+
+<br><br><br><br>
+<div class="row" ">
+  <div class="col-sm-6" >
+    <div class="card" style="  background-color: mintcream; width: max-content;">
+      <div class="card-body">
+        <h3 class="card-title" style="color: white; background-color: black; width:fit-content;padding:  12px; border-radius: 5px; font-family: cooper black;">Donor Dashboard</h3>
+        <img src="https://plasmasonation.s3.jp-tok.cloud-object-storage.appdomain.cloud/plasmadonor.jpg" width="280px;">
+        <p class="card-text"></p>
+        <a href="{{url_for('donor')}}" class="btn btn-dark">EXPLORE HERE</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-6">
+    <div class="card" style="  background-color: mintcream;;width: max-content;">
+      <div class="card-body">
+        <h3 class="card-title" style="color: white; background-color: black; width:fit-content;padding: 12px; border-radius: 5px; font-family: cooper black;">Receiver Dashboard</h3>
+  
+        <img src="https://plasmasonation.s3.jp-tok.cloud-object-storage.appdomain.cloud/plasmareceive.jpg" width="280px; ">
+       
+        <p class="card-text"></p>
+        <a href="{{url_for('receiver')}}" class="btn btn-dark" style="text-align: center;">EXPLORE HERE</a>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+
+{% endblock %}

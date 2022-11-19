@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <style type='text/css'>
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                color: black;
+                display: table;
+                font-family: Georgia, serif;
+                font-size: 24px;
+                text-align: center;
+                
+            }
+            .container {
+                border: 20px solid tan;
+                width: 750px;
+                height: 563px;
+                display: table-cell;
+                vertical-align: middle;
+                background-color: aqua;
+            }
+            .logo {
+                color:red;
+            }
+
+            .marquee {
+                color:brown;
+                font-size: 48px;
+                margin: 20px;
+            }
+            .assignment {
+                margin: 20px;
+            }
+            .person {
+                border-bottom: 2px solid black;
+                font-size: 32px;
+                font-style: italic;
+                margin: 20px auto;
+                width: 400px;
+            }
+            .reason {
+                margin: 20px;
+            }
+
+
+
+            .btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+        </style>
+    </head>
+    <body>
+        
+                   <div class="container" >
+            <div class="logo">
+                WEB SOLUTE(
+                    Complete web solution organization
+                )
+            </div>
+
+            <div class="marquee">
+                Certificate of Plasma Donation
+            </div>
+
+            <div class="assignment">
+                This certificate is presented to
+            </div>
+
+            <div class="person">
+                
+            {{msg1}}
+            </div>
+
+            <div class="reason">
+               For successfully donated plasma for {{msg2}} times through our plasma donor application
+            </div>
+        </div>
+     
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<button class="btn"><i class="fa fa-download"></i> Download</button>
+    </body>
+</html>
