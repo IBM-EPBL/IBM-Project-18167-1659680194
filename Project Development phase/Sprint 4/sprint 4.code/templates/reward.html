@@ -1,0 +1,27 @@
+{% extends "donordashboard.html" %}
+
+{% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                {{msg}}{{msg2}}{{msg4}} </h6>
+                {% endblock %}
+
+
+ {% endblock %}
+
+{% block reward%}
+<form action="/certificate" method="post">
+    <h5 class="card-title" style="background-color:blue; color:aliceblue;border-radius :10px; padding:10px;">{{msg4}}</h5><br>
+
+<input type="text" name="name" placeholder="Full name">
+<input type="number" name="count" placeholder="No of Donation count"><br><br>
+
+<button type="submit" class="btn btn-primary" value="submit">SUBMIT</button>
+</form>
+{% endblock %}

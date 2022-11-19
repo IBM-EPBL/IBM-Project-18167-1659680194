@@ -1,0 +1,107 @@
+{% extends "home.html" %}
+
+ {% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                {{msg}}{{msg2}}{{msg4}} </h6>
+                {% endblock %}
+
+
+ {% endblock %}
+
+{% block requestlist %}
+{% block div1 %}
+<br><a href="/list">
+
+<h2 style="text-align: left; background-color:aliceblue; width: fit-content; padding: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-radius:10px;">REQUEST LIST </h2><br></a>
+         {% for row in students %}
+
+         <table style="margin-top:10px ; "">
+          <tr>
+         <div class="card text-bg-dark mb-3" style="max-width:400PX;">
+
+ 
+          <div class="card-header" style="text-align:left ; font-size:20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color:blue;"> {{row["NAME"]}}</div>
+          <div class="card-body">
+            <div class="container text-center">
+            <div class="row">
+            <div class="col">
+             {{row["BLOODGROUP"]}} </div>
+             <div class="col">
+              {{row["CITY"]}} </div>
+            <div class="col">
+              {{row["PHONE"]}}
+          
+              </div></div></div>
+          </div></div></div>
+        </tr><br></table> 
+         {% endfor %}
+      
+       
+
+   {% endblock %}
+
+   {% endblock %}
+
+{% block content %}
+<br>
+
+<div class="container overflow-hidden text-center" style="margin-top:30px ; ">
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 border bg-dark overflow-hidden" ><div class="card" >
+            <div class="card-body">
+              <h5 class="card-title bg-dark" style=" color:aliceblue;border-radius :10px; padding:10px;">ADD ME DONOR</h5><br>
+              <p class="card-text" style="text-align:justify ;">Click the below botton and fill the form with your details.</p><br>
+              <a href="/add-donor" class="btn btn-primary">Goto Form</a>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-dark">
+            <div class="card">
+      <div class="card-body">
+        <h5 class="card-title bg-dark" style=" color:aliceblue;border-radius :10px; padding:10px;">UPDATE PROFILE</h5><br>
+        <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to update your Profile</p><br>
+        <a href="/updateprofile" class="btn btn-primary">UPDATE</a>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="col-6">{% block verify %}
+        <div class="p-3 border bg-dark">
+            <div class="card">
+      <div class="card-body">
+        <h5 class="card-title bg-dark" style="color:aliceblue;border-radius :10px; padding:10px;">VERIFY DONOR</h5><br>
+        <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to Verify your Profile as Verified Donor</p><br>
+        <a href="/verifydonor" class="btn btn-primary">VERIFY</a>
+        {% endblock %}
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-dark">
+            <div class="card">
+      <div class="card-body">{% block reward%}
+        <h5 class="card-title bg-dark" style=" color:aliceblue;border-radius :10px; padding:10px;">REWARDS</h5><br>
+        <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to collect your Reward</p><br>
+        <a href="reward" class="btn btn-primary">COLLECT</a>{% endblock %}
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+{% endblock %}
+
