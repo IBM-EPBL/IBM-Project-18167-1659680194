@@ -1,0 +1,28 @@
+<html>
+<head>
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "37fa0360-2b9e-4b65-9f75-e7e48d73bed5", // The ID of this integration.
+    region: "jp-tok", // The region your integration is hosted in.
+    serviceInstanceID: "41454326-e9ee-479e-8a34-4a43da4892d6", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+<link rel="stylesheet" href="">
+</head>
+<body>
+<h1 class="h1">Hospitality</h1>
+
+<img src="https://bavabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/img1.jfif">
+<img src="https://bavabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/img2.jfif">
+<img src="https://bavabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/img3.jfif">
+<img src="https://bavabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/img4.jfif">
+<img src="https://bavabucket.s3.jp-tok.cloud-object-storage.appdomain.cloud/img5.jfif">
+
+</body>
+</html>
