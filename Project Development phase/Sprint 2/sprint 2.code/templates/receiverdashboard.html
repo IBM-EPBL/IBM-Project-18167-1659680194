@@ -1,0 +1,70 @@
+{% extends "home.html" %}
+
+ {% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                {{msg}}{{msg2}} </h6>
+                {% endblock %}
+
+
+
+
+
+ {% endblock %}
+
+{% block content %}
+<div class="container overflow-hidden text-center" style="margin-top:30px ;">
+  <div class="row gy-5">
+    <div class="col-6">
+      <div class="p-3 border bg-dark"><div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;">REQUEST PLASMA</h5><br>
+            <p class="card-text" style="text-align:justify ;">Click the below botton to request blood plasma.</p><br>
+            <a href="/request_1" class="btn btn-primary">REQUEST</a>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-dark">
+          <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;">SEARCH DONOR</h5><br>
+      <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to search donor near you.</p><br>
+      <a href="#" class="btn btn-primary">SEARCH</a>
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-dark">
+          <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;"> SWITCH ROLE</h5><br>
+      <p class="card-text" style="text-align: JUSTIFY;">Click the below button to Switch role as a Donor</p><br>
+      <a href="{{url_for('donor')}}" class="btn btn-primary">DONATE</a>
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-dark">
+          <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;">FEEDBACK</h5><br>
+      <p class="card-text" style="text-align: JUSTIFY;">Click below and write how the plasma donation helps you.</p><br>
+      <a href="#" class="btn btn-primary">FEEBBACK</a>
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

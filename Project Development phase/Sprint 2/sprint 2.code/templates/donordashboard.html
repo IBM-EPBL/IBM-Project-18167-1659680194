@@ -1,0 +1,72 @@
+{% extends "home.html" %}
+
+ {% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                {{msg}}{{msg2}} </h6>
+                {% endblock %}
+
+
+ {% endblock %}
+
+
+
+{% block content %}
+
+<div class="container overflow-hidden text-center" style="margin-top:30px ; ">
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 border bg-dark overflow-hidden" ><div class="card" >
+            <div class="card-body">
+              <h5 class="card-title bg-dark" style=" color:aliceblue;border-radius :10px; padding:10px;">ADD ME DONOR</h5><br>
+              <p class="card-text" style="text-align:justify ;">Click the below botton and fill the form with your details.</p><br>
+              <a href="/add-donor" class="btn btn-primary">Goto Form</a>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-dark">
+            <div class="card">
+      <div class="card-body">
+        <h5 class="card-title bg-dark" style=" color:aliceblue;border-radius :10px; padding:10px;">UPDATE PROFILE</h5><br>
+        <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to update your Profile</p><br>
+        <a href="#" class="btn btn-primary">UPDATE</a>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-dark">
+            <div class="card">
+      <div class="card-body">
+        <h5 class="card-title bg-dark" style="color:aliceblue;border-radius :10px; padding:10px;">VERIFY DONOR</h5><br>
+        <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to Verify your Profile as Verified Donor</p><br>
+        <a href="#" class="btn btn-primary">VERIFY</a>
+      </div>
+    </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-dark">
+            <div class="card">
+      <div class="card-body">
+        <h5 class="card-title bg-dark" style=" color:aliceblue;border-radius :10px; padding:10px;">REWARDS</h5><br>
+        <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to collect your Reward</p><br>
+        <a href="#" class="btn btn-primary">COLLECT</a>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+{% endblock %}
