@@ -1,0 +1,112 @@
+{% extends "home.html" %}
+
+ {% block navbar %}
+
+<li class="nav-item ">
+                  <a class="nav-link " href="{{url_for('logout')}}">Log Out</a>
+                </li>
+
+                {% block heading %}
+                <h6  style="color:white; padding-bottom:0px; font-family: 'Times New Roman', Times, serif; font-size: 22px; ">
+                {{msg}}{{msg2}} </h6>
+                {% endblock %}
+
+
+
+                {% block div1 %}
+
+                {% block donorlist %}
+
+
+
+
+
+
+                <br>
+               
+                <h2 style="text-align: left; background-color:aliceblue; width: fit-content; padding: 10px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; border-radius:10px;">{{msg3}} </h2><br>
+                         {% for row in students %}
+                
+                         <table style="margin-top:10px ; "">
+                          <tr>
+                         <div class="card text-bg-dark mb-3" style="max-width:400PX;">
+                
+                 
+                          <div class="card-header" style="text-align:left ; font-size:20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; background-color:blue;"> {{row["NAME"]}}</div>
+                          <div class="card-body">
+                            <div class="container text-center">
+                            <div class="row">
+                            <div class="col">
+                             {{row["BLOODGROUP"]}} </div>
+                             <div class="col">
+                              {{row["CITY"]}} </div>
+                            <div class="col">
+                              {{row["PHONE"]}}
+                          
+                              </div></div></div>
+                          </div></div></div>
+                        </tr><br></table> 
+                         {% endfor %}
+                      
+                       
+                
+                   {% endblock %}
+                
+
+ {% endblock %}
+ {% endblock %}
+
+
+
+{% block content %}
+<div class="container overflow-hidden text-center" style="margin-top:30px ;">
+  <div class="row gy-5">
+    <div class="col-6">
+      <div class="p-3 border bg-dark"><div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;">REQUEST PLASMA</h5><br>
+            <p class="card-text" style="text-align:justify ;">Click the below botton to request blood plasma.</p><br>
+            <a href="/request_1" class="btn btn-primary">REQUEST</a>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-dark">
+          <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;">SEARCH DONOR</h5><br>
+      <p class="card-text" style="text-align: JUSTIFY;">Click the below botton to search donor near you.</p><br>
+      <a href="/donorlist" class="btn btn-primary">SEARCH</a>
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-dark">
+          <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;"> SWITCH ROLE</h5><br>
+      <p class="card-text" style="text-align: JUSTIFY;">Click the below button to Switch role as a Donor</p><br>
+      <a href="{{url_for('donor')}}" class="btn btn-primary">DONATE</a>
+    </div>
+  </div>
+      </div>
+    </div>
+    <div class="col-6">
+      {% block feedback %}
+      <div class="p-3 border bg-dark">
+          <div class="card">
+    <div class="card-body">
+      <h5 class="card-title" style="background-color: black; color:aliceblue;border-radius :10px; padding:10px;">FEEDBACK</h5><br>
+      <p class="card-text" style="text-align: JUSTIFY;">Click below and write how the plasma donation helps you.</p><br>
+      <a href="/feedback" class="btn btn-primary">FEEBBACK</a>{% endblock %}
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
